@@ -31,6 +31,40 @@ ul:first-of-type li:nth-of-type(1),ul:first-of-type li:nth-of-type(2), ul:first-
 ul:first-of-type li:nth-of-type(2), ul:first-of-type li:nth-of-type(3) {
   background-color: pink;
 }
+
+ul:last-of-type li{
+  text-decoration: none;
+}
+
+ul:last-of-type li a:link, :last-of-type li a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+ul:last-of-type li a:hover{
+  text-decoration: none;
+  font-weight: 900;
+}
+
+ul:last-of-type li:nth-of-type(1) a:hover{
+  color: orange;
+}
+
+ul:last-of-type li:nth-of-type(2) a:hover{
+  color: green;
+}
+
+ul:last-of-type li:nth-of-type(3) a:hover{
+  color: black;
+}
+
+ul:last-of-type li:nth-of-type(4) a:hover{
+  color: yellow;
+}
+
+ul:last-of-type li:nth-of-type(5) a:hover{
+  color: green;
+}
 /*
  - Faça com que todos os itens de Listas Ordenadas tenham uma cor de fundo amarela. Se a numeração do item for PAR, faça a cor de fonte ser verde. Se o número for considerado primo, utilize a propriedade text-transform para deixar o texto maiúsculo. (Dica: combinar classes pode ser útil aqui).
  - Faça todas as tags Header (h1, h2...) possuírem cor de fonte vermelha e, se alguma delas estiver em itálico, aumente seu tamanho para 40px e acrescente uma borda de 1px preta e sólida.
