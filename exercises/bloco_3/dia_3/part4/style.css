@@ -28,8 +28,10 @@ ul:first-of-type li:nth-of-type(1),ul:first-of-type li:nth-of-type(2), ul:first-
   color: blue;
 }
 
-ul:first-of-type li:nth-of-type(2), ul:first-of-type li:nth-of-type(3) {
-  background-color: pink;
+
+ul:first-of-type li {
+  content: 'JAVA';
+  background-color: black;
 }
 
 ul:last-of-type li{
