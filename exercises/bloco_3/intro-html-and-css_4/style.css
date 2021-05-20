@@ -1,0 +1,76 @@
+p {
+  font-size: 18px;
+  line-height: 30px;
+  text-align: justify;
+}
+
+main {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+header h1{
+  font-size: 20px;
+}
+
+img {
+  width: 260px;
+}
+
+.navbar li{
+  display: inline-block;
+  margin-right: 50px;
+}
+.general-info {
+  border: 1px solid black;
+}
+.general-info h3 {
+  text-align: center;
+}
+.general-info img{
+  display: inline-block;
+  width: 35%;
+}
+.general-info p{
+  width: 70%;
+  border: 1px solid black;
+  position: static;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;
+}
+.general-info table{
+  display: inline-block;
+  width: 40%;
+  font-size: 14px;
+  margin-left: 5%;
+}
+
+.general-info .img-table{
+  display: inline-block;
+  width: 90%;
+  margin-left: 4.5%;
+  border: 1px solid black;
+}
+th, td {
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+}
+/*----------------------------------------------------------*/
+
+.fact-1 {
+  border: 1px solid black;
+}
+
+.fact-1 p{
+  border: 1px solid black;
+  display: inline-block;
+  width: 50%;
+  position: relative;
+  top: -1em;
+}
+
+.fact-1 img {
+  width: 35%;
+  float: right;
+}
