@@ -41,3 +41,22 @@ for (let i = n - 1; i >= 0; i -= 1) {
     console.log(' '.repeat(i/2) + '*'.repeat(n-i) + ' '.repeat(i/2));
   }
 }
+
+/*
+5- Faça uma pirâmide com n asteriscos de base que seja vazia no meio. Assuma que o valor de n será sempre ímpar:
+*/
+console.log('\n');
+
+n = 5;
+
+for (let i = n - 1; i >= 0; i -= 1) {
+  if (i === n - 1) {
+    console.log(' '.repeat(i/2) + '*'.repeat(n-i) + ' '.repeat(i/2));
+  }
+  else if (i === 0) {
+    console.log('*'.repeat(n));
+  }
+  else {
+    console.log(' '.repeat(Math.floor(i/2)) + '*' + ' '.repeat(i - 2*Math.floor(i/2)) + '*' + ' '.repeat(Math.floor(i/2)));
+  }
+}
