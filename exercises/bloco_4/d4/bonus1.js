@@ -20,7 +20,6 @@ function romanToArabic(roman) {
     for (let key in roman) {
       strArr.push(roman[key]);
     }
-    console.log(strArr);
 
     for (let i = 0; i < strArr.length; i += 1) {
       
