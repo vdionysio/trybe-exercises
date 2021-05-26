@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin: 0 auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    <div class="main-content">
+      <div class="center-content">
+        <p>Texto padrão do nosso site</p>
+        <p>-----</p>
+        <p>Trybe</p>
+      </div>
+    </div>
+    <script>
+      //Crie uma função que mude o texto na tag <p> para uma descrição de como você se vê daqui a 2 anos.
+      function textToTag(tag, index, text) {
+        return document.getElementsByTagName(tag)[index].innerText = text;
+      }
+      textToTag('p', 1, 'Empregado e com estabilidade em uma empresa de valores semelhantes aos meus.')
+
+      //Crie uma função que mude a cor do quadrado amarelo para o verde da Trybe (rgb(76,164,109)).
+      function bgColor(className, index, color) {
+        return document.getElementsByClassName(className)[index].style.backgroundColor = color
+      }
+      bgColor('main-content', 0, 'rgb(76,164,109)')
+      // Crie uma função que mude a cor do quadrado vermelho para branco.
+      bgColor('center-content', 0, 'white')
+
+      //Crie uma função que corrija o texto da tag <h1>.
+      function correctH1(tag, index, text) {
+        return document.getElementsByTagName(tag)[index].innerText = text;
+      }
+      correctH1('h1', 0, 'Exercício 5.1 - JavaScript')
+
+      //Crie uma função que modifique todo o texto da tag <p> para maiúsculo.
+      function uppercaseTag(tag) {
+        let arr = document.getElementsByTagName(tag);
+        for (let i = 0; i < arr.length; i += 1) {
+          arr[i].innerText = arr[i].innerText.toUpperCase();
+        }
+      }
+      uppercaseTag('p');
+
+      //Crie uma função que exiba o conteúdo de todas as tags <p> no console.
+      function showContentP() {
+        let arr = document.getElementsByTagName('p');
+        for (let i = 0; i < arr.length; i += 1) {
+          console.log(arr[i].innerHTML)
+        }
+      }
+      showContentP()
+    </script>
+  </body>
+</html>
