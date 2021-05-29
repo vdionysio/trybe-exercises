@@ -24,7 +24,9 @@ function createDaysNumbers() {
     dayItem.style.display = 'inline-block'
     dayItem.className = 'day'
     dayItem.style.width = '13.6%'
+    dayItem.style.marginBottom = '12px'
     dayItem.style.alignContent = 'right'
+    
     document.getElementsByTagName('ul')[2].appendChild(dayItem);
   }
 
@@ -85,6 +87,8 @@ for (let i = 0; i < dayZoom.length; i += 1) {
   dayZoom[i].addEventListener('mouseover', function (element) {
     element.target.style.fontSize = '24px'
     element.target.style.fontWeight = 'bold'
+    element.target.style.marginBottom = '6px'
+    element.target.style.cursor = 'pointer';
   });
 }
 
@@ -92,9 +96,78 @@ for (let i = 0; i < dayZoom.length; i += 1) {
   dayZoom[i].addEventListener('mouseleave', function (element) {
     element.target.style.fontSize = ''
     element.target.style.fontWeight = ''
+    element.target.style.marginBottom = '12px'
   });
 }
 
+function createTask(string) {
+  let spanTag = document.createElement('span');
+  spanTag.innerHTML = string;
+  //spanTag.style.display = 'block';
+  document.querySelector('div.my-tasks').appendChild(spanTag);
+}
+createTask("Projeto: ");
+//createTask("estudar");
+
+function createTaskSubt(color) {
+  let subtitle = document.createElement('div');
+  subtitle.classList.add('task')
+  subtitle.style.borderRadius = '50%';
+  subtitle.style.backgroundColor = color;
+  document.querySelector('div.my-tasks').appendChild(subtitle);
+}
+createTaskSubt('#F35211');
+
+document.querySelector('div.my-tasks').addEventListener('click', function (element) {
+  if (element.target.className == 'task') {
+    element.target.classList.add('selected');
+  } else {
+    element.target.classList.remove('selected')
+  }
+});
+
+dayClick = document.getElementsByClassName('day');
+checkColorTag = document.querySelector('div.task').classList;
+for (let i = 0; i < dayClick.length; i += 1) {
+  dayClick[i].addEventListener('click', function (element) {
+    if (checkColorTag.contains('selected')) {
+      if (element.target.style.color === '') {
+        element.target.style.color = '#F35211'
+      } else {
+        element.target.style.color = ''
+      }
+    }
+  });
+}
+document.querySelector('#btn-add').addEventListener('click', function () {
+  let inputVal = document.getElementById("task-input").value;
+  if (inputVal == '') {
+    window.alert('Nenhum tarefa adicionada')
+  } else {
+    TaskItem = document.createElement('li');
+    TaskItem.innerHTML = inputVal;
+    document.querySelector('.task-list').appendChild(TaskItem);
+    document.querySelector('#task-input').value = ''
+  }
+})
+
+document.querySelector('#task-input').addEventListener('keypress', function (element) {
+  let inputVal = document.querySelector('#task-input').value;
+  if (element.key === 'Enter')
+  if (inputVal == '') {
+    window.alert('Nenhum tarefa adicionada')
+  } else {
+    TaskItem = document.createElement('li');
+    TaskItem.innerHTML = inputVal;
+    document.querySelector('.task-list').appendChild(TaskItem);
+    document.querySelector('#task-input').value = ''
+  }
+})
+
 
 /*
-.*/
+Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+Se nenhum caractere for inserido no campo input , a função deve retornar um alert com uma mensagem de erro ao clicar em "ADICIONAR".
+Ao pressionar a tecla "enter" o evento também deverá ser disparado.
+Dica - Propriedade: keyCode .
+*/
