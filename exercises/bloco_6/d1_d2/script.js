@@ -6,7 +6,13 @@ window.onload = function start() {
     document.getElementById('select-state').appendChild(opt);
   }
 
-  document.getElementById('submit-btn').addEventListener('click', function(ev) {
-    ev.preventDefault()
+  let today = new Date;
+  let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+  //https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
+  document.getElementById('init-date').DatePickerX.init({
+    minDate: new Date(1900, 0, 0),
+    maxDate: date,
   });
+
+  new window.JustValidate('#form');
 };
