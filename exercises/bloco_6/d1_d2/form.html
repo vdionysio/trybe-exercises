@@ -12,6 +12,7 @@
   <script src="/bootstrap-5.0.1-dist/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="dist/css/DatePickerX.min.css">
   <script src="dist/js/DatePickerX.min.js"></script>
+  <script src="/node_modules/just-validate/dist/js/just-validate.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -20,90 +21,67 @@
     </header>
   </div>
   <div class="container">
-    <form action="" method="GET">
+    <form id="form" action="" method="GET">
       <fieldset>
         <legend>Dados Pessoais</legend>
         <div class="form-group">
-          <label for="input-name">
-          Name
-          </label>
-          <input class="form-control" id="input-name" name="name" type="text" required maxlength="40">
+          <label for="name">Name</label>
+          <input class="form-control" data-validate-field="name" name="name" type="text">
         </div>
         
         <div class="form-group">
-          <label for="input-email">
-            Email
-          </label>
-          <input class="form-control" id="input-email" name="email" type="email" required maxlength="50">
+          <label for="email">Email</label>
+          <input class="form-control" data-validate-field="email" name="email" type="email">
         </div>
   
         <div class="form-group">
-          <label for="input-cpf">
-            CPF
-          </label>
-          <input class="form-control" id="input-cpf" name="cpf" type="text" required maxlength="11">
+          <label for="input-cpf">CPF</label>
+          <input class="form-control" id="input-cpf" name="cpf" type="text">
         </div>
   
         <div class="form-group">
-          <label for="input-adr">
-            Endereço
-          </label>
-          <input class="form-control" id="input-adr" name="adr"type="text" required maxlength="200">
+          <label for="input-adr">Endereço</label>
+          <input class="form-control" id="input-adr" name="adr"type="text">
         </div>
   
         <div class="form-group">
-          <label for="input-city">
-            Cidade
-          </label>
-          <input class="form-control" id="input-city" name="city" type="text" required maxlength="28">
+          <label for="input-city">Cidade</label>
+          <input class="form-control" id="input-city" name="city" type="text">
         </div>
   
         <div class="form-group">
-          <label for="select-state">
-            Estado
-          </label>
+          <label for="select-state">Estado</label>
           <select class="form-select" name="" id="select-state">
           </select>
         </div>
   
         <div class="form-group">
-          <label class="form-check-label" for="tipo-1">
-            Casa
-          </label>
+          <label class="form-check-label" for="tipo-1">Casa</label>
           <input class="form-check-input" type="radio" name="tipo" id="tipo-1">
-          <label for="tipo-2">
-            Apartamento
-          </label>
+          <label for="tipo-2">Apartamento</label>
           <input class="form-check-input" type="radio" name="tipo" id="tipo-2">
         </div>
       </fieldset>
       <fieldset>
         <legend>Currículo</legend>
         <div class="form-group" >
-          <label for="resume">
-            Resumo do Currículo: <textarea class="form-control" name="resumo" id="resume" cols="60" rows="10" maxlength="1000" required></textarea>
-          </label>
+          <label for="resume">Resumo do Currículo:</label>
+          <textarea class="form-control" name="resumo" id="resume" cols="60" rows="10"></textarea>
         </div>
   
         <div class="form-group" >
-          <label for="job">
-            Cargo
-          </label>
-          <input class="form-control" type="text" id="job" name="job" maxlength="40" required>
+          <label for="job">Cargo</label>
+          <input class="form-control" type="text" id="job" name="job">
         </div>
   
         <div class="form-group" >
-          <label for="description">
-            Descrição do Cargo
-          </label>
-          <input class="form-control" type="text" id="description" name="descript" maxlength="500" required>
+          <label for="description">Descrição do Cargo</label>
+          <input class="form-control" type="text" id="description" name="descript">
         </div>
   
         <div class="form-group" >
-          <label for="init-date">
-            Data de início
-          </label>
-          <input class="form-control" type="text" name="init-date" id="init-date" required>
+          <label for="init-date">Data de início</label>
+          <input class="form-control" type="text" name="init-date" id="init-date">
         </div>
   
       </fieldset>

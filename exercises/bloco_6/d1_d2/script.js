@@ -8,10 +8,11 @@ window.onload = function start() {
 
   let today = new Date;
   let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-  console.log(date);
   //https://phoenixnap.com/kb/how-to-get-the-current-date-and-time-javascript
   document.getElementById('init-date').DatePickerX.init({
     minDate: new Date(1900, 0, 0),
     maxDate: date,
   });
+
+  new window.JustValidate('#form');
 };
