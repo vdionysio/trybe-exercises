@@ -1,0 +1,11 @@
+.personal-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.personal-labels {
+  margin: 5px;
+  display: flex;
+  width: 250px;
+  justify-content: space-between;
+}
