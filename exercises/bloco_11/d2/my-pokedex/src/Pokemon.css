@@ -1,0 +1,19 @@
+.pokemon {
+  display: flex;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 10px auto;
+  width: 300px;
+}
+
+@media (min-width: 768px) {
+  .pokemon {
+    display: flex;
+    flex-basis: 40%;
+  }
+  
+  .pokemon:last-of-type {
+    flex-basis: 90%;
+  }
+}

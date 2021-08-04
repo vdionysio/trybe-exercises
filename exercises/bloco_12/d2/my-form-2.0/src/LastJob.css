@@ -1,0 +1,9 @@
+.last-job-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.last-job-labels {
+  display: flex;
+  flex-direction: column;
+}
